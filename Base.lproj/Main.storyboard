@@ -26,64 +26,137 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="selectedSegmentTintColor" systemColor="linkColor"/>
                                 <connections>
-                                    <action selector="segmentClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="tFf-nA-6Jp"/>
+                                    <action selector="segmentSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="rXv-Ma-Qka"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Red" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2z-TW-m7f">
                                 <rect key="frame" x="80" y="187" width="254" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="36c-2M-pfU"/>
+                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="l7J-mR-bAE"/>
                                     <action selector="rangeRGB:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ogl-TU-RRL"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Green" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-e5-ACy">
                                 <rect key="frame" x="80" y="229" width="254" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="BnR-LG-TOc"/>
+                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="5j8-0f-fbm"/>
                                     <action selector="rangeRGB:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="3sC-CX-pcg"/>
                                 </connections>
                             </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-nh-Bxg">
+                                <rect key="frame" x="85" y="688" width="244" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="4s3-Oq-ktr" kind="embed" id="ILc-4Z-3Te"/>
+                                </connections>
+                            </containerView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Blue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPz-Te-iGT">
                                 <rect key="frame" x="80" y="271" width="254" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="twt-NH-jdm"/>
+                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="gLa-Do-dD4"/>
                                     <action selector="rangeRGB:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RDy-m7-aAQ"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljh-cS-qTt" customClass="GradientButton" customModule="Color_Transpiler" customModuleProvider="target">
+                                <rect key="frame" x="80" y="685" width="254" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Convert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                        <color key="value" systemColor="systemPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                        <color key="value" systemColor="systemTealColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPs-uF-5J0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miO-vp-eQx">
+                                <rect key="frame" x="80" y="389" width="254" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8m-Wk-voc">
+                                <rect key="frame" x="80" y="554" width="254" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="blueText" destination="jPz-Te-iGT" id="Qmk-Xu-QV4"/>
+                        <outlet property="buttonContainer" destination="6Zn-nh-Bxg" id="mZJ-IB-TBc"/>
+                        <outlet property="convertButton" destination="Ljh-cS-qTt" id="lhw-Ep-RaQ"/>
                         <outlet property="greenText" destination="ikG-e5-ACy" id="boM-XE-8bK"/>
                         <outlet property="redText" destination="b2z-TW-m7f" id="UeY-Xv-QLa"/>
                         <outlet property="segmentControl" destination="NWA-S2-3uc" id="lZD-PA-30l"/>
+                        <outlet property="showColor" destination="miO-vp-eQx" id="Omi-Di-wpu"/>
+                        <outlet property="showResultText" destination="J8m-Wk-voc" id="2TM-zB-4Qk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.6956521739130448" y="137.94642857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Vnz-5C-6cc">
+            <objects>
+                <viewController id="4s3-Oq-ktr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjA-X2-bgR">
+                        <rect key="frame" x="0.0" y="0.0" width="244" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Eqs-Mm-KlF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPT-mj-hXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="-278"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="Ljh-cS-qTt">
+            <size key="intrinsicContentSize" width="76" height="39"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
