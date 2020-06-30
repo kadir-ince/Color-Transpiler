@@ -17,13 +17,8 @@ This application converts RGB and HEX color codes to each other.
 If you want to open it on your Mac, open Terminal and write respectively below codes
 <br>
 1️⃣ ``` git clone https://github.com/kadir-ince/Color-Transpiler.git ```  <br>
-2️⃣ ``` cd Color-Transpiler``` <br>
-3️⃣ ``` xed . ``` <br>
-
-<b>What do these codes do?</b> <br>
-git clone --> Cloning the project on your Mac from GitHub <br>
-cd To-Do --> Change current directory to the project directory <br>
-xed . --> Open the project in Xcode <br>
+2️⃣ Now open folder in Finder and create new folder and rename "Color Transpiler". Move all files inside to Color Transpiler folder not only  "Color Transpiler.xcodeproj" file. <br>
+You can open it. <br>
 
 
 ## What Features Will Be Added To The App
