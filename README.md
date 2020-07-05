@@ -19,8 +19,5 @@ If you want to open it on your Mac, open Terminal and write respectively below c
 1️⃣ ``` git clone https://github.com/kadir-ince/Color-Transpiler.git ```  <br>
 2️⃣ Now open folder in Finder and create new folder and rename "Color Transpiler". Move all files inside to Color Transpiler folder not only  "Color Transpiler.xcodeproj" file. <br>
 You can open it. <br>
+❗️This app not have auto layout, please run iPhone 11 simulator.
 
-
-## What Features Will Be Added To The App
-- [ ] Auto layout for landscape mode
-- [ ] Optimize viewController.swift
